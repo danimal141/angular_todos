@@ -8,7 +8,7 @@ angular
         controller: 'TodoCtrl',
         templateUrl: 'todomvc-index.html'
       })
-      .when(':status', {
+      .when('/:status', {
         controller: 'TodoCtrl',
         templateUrl: 'todomvc-index.html'
       })

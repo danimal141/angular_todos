@@ -37,12 +37,12 @@ angular
     }
 
     $scope.editTodo = function(todo) {
-      $scope.editTodo = todo;
+      $scope.editedTodo = todo;
       $scope.originalTodo = angular.extend({}, todo);
     }
 
     $scope.doneEditing = function(todo) {
-      $scope.editTodo = null;
+      $scope.editedTodo = null;
       todo.title = todo.title.trim();
 
       if (!todo.title) {
@@ -65,7 +65,7 @@ angular
       });
     }
 
-    $scope.markAll = function(comleted) {
+    $scope.markAll = function(completed) {
       todos.forEach(function(todo) {
         todo.completed = !completed;
       });
